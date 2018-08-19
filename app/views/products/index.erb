@@ -1,0 +1,9 @@
+<h1>Product index page</h1><br>
+<% cart.each do |c| %>
+  <%= c %><br>
+<% end %>
+
+  <%= form_tag (root_path), method: 'post' do %>
+    <%= text_field_tag :product %>
+    <%= submit_tag "add to cart" %>
+  <% end %>
